@@ -65,19 +65,16 @@ const showPhoneDetails = (phones) => {
     const phoneName = document.getElementById('phone-name');
     phoneName.innerText = phones.name;
     const showDetailContainer = document.getElementById('show-detail-container');
-    // console.log(phones.image);
-    showDetailContainer.innerHtml = `
-    <img src="${phones?.image}" alt="">
-    <p><span>Storage:</span>${phones?.mainFeatures
-        ?.storage}</p>
-    // const div = document.createElement('div');
-    // div.innerHTML = `
+    
+    const div = document.createElement('div');
+    div.innerHTML = `
 
-    //             <img src="${phones?.image}" alt="">
-    //             <p>Hello</p>
-    // `
-    // showDetailContainer.appendChild(div);
+                <img src="${phones?.image}" alt="">
+                <p>span>Storage:</span>${phones?.mainFeatures
+                ?.storage}</p>
     `
+    showDetailContainer.appendChild(div);
+    // `
 
     // Show the modal
     showDetailsModal.showModal()
