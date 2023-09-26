@@ -13,7 +13,7 @@ const displayPhones = phone =>{
         console.log(data);
         const phoneCard = document.createElement('div');
         phoneCard.classList = `
-        card w-96 bg-gray-100 shadow-xl mx-auto
+        card w-96 bg-gray-100 p-4 shadow-xl mx-auto
         `;
         phoneCard.innerHTML =`
         <figure>
@@ -29,6 +29,13 @@ const displayPhones = phone =>{
         `;
         phoneContainer.appendChild(phoneCard)
     })
+}
+
+// Handle Search Button
+const handleSearch = () =>{
+    const searchField = document.getElementById('search-field');
+    const searchText = searchField.value;
+    console.log(searchText);
 }
 
 loadPhone()
