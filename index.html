@@ -18,10 +18,13 @@
             <input id="search-field" type="text" placeholder="Search..." class="input input-bordered w-full max-w-xs rounded-xl" />
             <button onclick="handleSearch()" class="btn btn-outline btn-accent ml-4">Search</button>
         </section>
-
         <!-- Search Result -->
         <section>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            </div>
+            <!-- Show all Button -->
+            <div id="show-all-container" class="hidden justify-end">
+                <button id="show_all" class="btn btn-error ml-5 w-38 rounded-xl mt-5">Show All</button>
             </div>
         </section>
     </main>

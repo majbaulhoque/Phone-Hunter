@@ -11,6 +11,16 @@ const displayPhones = phone =>{
     // ! Clear phone container cards before adding new cards
     phoneContainer.innerText = '';
 
+    const showAllContainer = document.getElementById('show-all-container')
+    if(phone.length > 5){
+        showAllContainer.classList.remove('hidden')
+    }else{
+        showAllContainer.classList.add('hidden')
+    }
+
+    // ? Display only first 12 phones
+    phone = phone.slice(0,5)
+
     phone.forEach(data =>{
         console.log(data);
         const phoneCard = document.createElement('div');
@@ -37,7 +47,7 @@ const displayPhones = phone =>{
 const handleSearch = () =>{
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
-    loadPhone(searchText)
+    loadPhone(searchText);
     console.log(searchText);
 }
 
